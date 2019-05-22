@@ -4,8 +4,9 @@ MAINTAINER sasc@lumc.nl
 
 ENV CLONE_DIR=/opt/wiseguy
 
+# Install git for installing wiseguy. Install acl for working on cluster.
 RUN apt-get update && \
-apt-get install -y --no-install-recommends git && \
+apt-get install -y --no-install-recommends git acl && \
 apt-get clean && \
 rm -rf /var/lib/apt/lists
 
